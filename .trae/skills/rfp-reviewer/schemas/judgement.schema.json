@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Judgement",
+  "type": "object",
+  "required": ["requirement_id", "judgement", "risk_level", "confidence", "human_review_required", "reason"],
+  "properties": {
+    "requirement_id": {"type": "string"},
+    "judgement": {"type": "string", "enum": ["满足", "不满足", "部分满足", "存疑", "未发现证明材料", "不适用", "需人工复核"]},
+    "risk_level": {"type": "string", "enum": ["P0 致命风险", "P1 高风险", "P2 中风险", "P3 低风险", "INFO 提示"]},
+    "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+    "human_review_required": {"type": "boolean"},
+    "reason": {"type": "string"},
+    "suggested_action": {"type": "string"},
+    "evidence_refs": {"type": "array", "items": {"type": "string"}}
+  }
+}

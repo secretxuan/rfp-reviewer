@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Evidence",
+  "type": "object",
+  "required": ["requirement_id", "evidence", "status"],
+  "properties": {
+    "requirement_id": {"type": "string"},
+    "status": {"type": "string", "enum": ["found", "not_found", "partial", "error"]},
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["source_type", "quote", "confidence"],
+        "properties": {
+          "source_type": {"type": "string", "enum": ["local_file", "web_search", "user_statement", "tool_output"]},
+          "file": {"type": "string"},
+          "locator": {"type": "string"},
+          "url": {"type": "string"},
+          "title": {"type": "string"},
+          "accessed_at": {"type": "string"},
+          "quote": {"type": "string"},
+          "evidence_type": {"type": "string"},
+          "confidence": {"type": "number", "minimum": 0, "maximum": 1}
+        }
+      }
+    },
+    "limitations": {"type": "array", "items": {"type": "string"}}
+  }
+}

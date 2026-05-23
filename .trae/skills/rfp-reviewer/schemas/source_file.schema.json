@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SourceFile",
+  "type": "object",
+  "required": ["file_id", "path", "name", "extension", "sha256", "role", "status"],
+  "properties": {
+    "file_id": {"type": "string"},
+    "path": {"type": "string"},
+    "name": {"type": "string"},
+    "extension": {"type": "string"},
+    "mime_guess": {"type": "string"},
+    "size_bytes": {"type": "integer", "minimum": 0},
+    "sha256": {"type": "string"},
+    "role": {"type": "string", "enum": ["unknown", "rfp", "bid_response", "qualification", "product", "quotation", "deviation_template", "contract", "case", "other"]},
+    "status": {"type": "string", "enum": ["ready", "parsed", "unsupported", "encrypted", "error"]},
+    "notes": {"type": "array", "items": {"type": "string"}}
+  }
+}

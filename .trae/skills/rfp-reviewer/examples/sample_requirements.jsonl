@@ -1,0 +1,1 @@
+{"requirement_id":"REQ-0001","category":"technical","mandatory_level":"fatal","source":{"file":"招标文件.pdf","locator":"page 68","section":"技术要求"},"text":"★系统须支持双活容灾能力。","required_evidence":["产品白皮书","技术方案","架构图"],"keywords":["★","须"],"confidence":0.78}
