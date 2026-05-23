@@ -1,0 +1,23 @@
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.4",
+  "base_commit_sha": "177101a493da85ac95867cc49be67006c871e798",
+  "prompts": {
+    "e64bf5764671724d": {
+      "agent_id": {
+        "tool": "trae-cue",
+        "id": "ai_tab-icr-354800dd-634f-4775-9a06-94cf7ba17378",
+        "model": "default"
+      },
+      "human_author": "fenglixuan <fenglixuan@bytedance.com>",
+      "messages": [],
+      "total_additions": 1,
+      "total_deletions": 1,
+      "accepted_lines": 1,
+      "overriden_lines": 0
+    }
+  },
+  "attestation_metadata": {},
+  "remote_transcripts": {}
+}
